@@ -20,7 +20,7 @@
 // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
 // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
 // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-//                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
+//                     | ALT  | LOWER | GUI |  SPACE |  | ENTER | BSPC | RAISE | GUI   |
             bindings = <
 &kp ESC   &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                       &kp N6   &kp N7   &kp N8    &kp N9  &kp N0   &kp GRAVE
 &kp TAB   &kp Q  &kp W  &kp E    &kp R    &kp T                        &kp Y    &kp U    &kp I     &kp O   &kp P    &kp MINUS
@@ -52,16 +52,16 @@
 
         raise_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |       |     |     |      |      |      |                   |      |  Inst |  Home |  PG_UP |        |        |
-// |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |      |  Del  |  End  |  PG_DN |        |   AC   |
-// |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |                   |  <-  |   v   |   ^   |   ->   |   AW   |   AA   |
-// |       |     |     |      |      |      |        |  |       | PREV |  P/P  |  Next |  MUTE  | Vol DN | Vol UP |
-//                     |      |      |      |        |  |       |      |       |       | 
+// |       |     |     |      |      |      |                   | PREV |       |  Inst  |  Home  |  PG_UP |  VolUP |
+// |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  P/P |       |  Del   |  End   |  PG_DN |  VolDN |
+// |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |                   | Next |       |   <    |   v    |   ^    |    >   |       
+// |       |     |     |      |      |      |        |  |       |      |       |  MUTE  |  Wins  |  Apps  |        |
+//                     |      |      |      |        |  |       |      |       |        | 
             bindings = <
-&trans    &trans &trans &trans  &trans  &trans                       &trans      &kp INS   &kp HOME   &kp PG_UP  &trans       &trans
-&kp F1    &kp F2 &kp F3 &kp F4  &kp F5  &kp F6                       &trans      &kp DEL   &kp END    &kp PG_DN  &trans       &kp C_AC_SEARCH
-&kp F7    &kp F8 &kp F9 &kp F10 &kp F11 &kp F12                      &kp LEFT    &kp DOWN  &kp UP     &kp RIGHT  &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS       &kp C_AC_DESKTOP_SHOW_ALL_APPLICATIONS
-&trans    &trans &trans &trans  &trans  &trans    &trans   &trans    &kp C_PREV  &kp C_PP  &kp C_NEXT &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP
+&trans    &trans &trans &trans  &trans  &trans                       &kp C_PREV  &trans    &kp INS    &kp HOME   &kp PG_UP  &VOL_UP
+&kp F1    &kp F2 &kp F3 &kp F4  &kp F5  &kp F6                       &kp C_PP    &trans    &kp DEL    &kp END    &kp PG_DN  &VOL_DN
+&kp F7    &kp F8 &kp F9 &kp F10 &kp F11 &kp F12                      &kp C_NEXT  &trans    &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
+&trans    &trans &trans &trans  &trans  &trans    &trans   &trans    &trans      &trans    &kp C_MUTE &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS  &kp C_AC_DESKTOP_SHOW_ALL_APPLICATIONS &trans
                         &trans  &trans  &trans    &trans   &trans    &trans      &trans    &trans
             >;
 
